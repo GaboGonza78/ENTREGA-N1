@@ -1,6 +1,6 @@
 # 🚀 Entrega Final Backend
 
-Proyecto backend desarrollado con Node.js, Express y MongoDB, que incluye generación de datos mock, adopción de mascotas, documentación con Swagger, tests funcionales y dockerización completa.
+Proyecto backend desarrollado con **Node.js, Express y MongoDB**, que incluye generación de datos mock, sistema de adopción de mascotas, documentación con Swagger, tests funcionales y dockerización completa.
 
 ---
 
@@ -17,26 +17,28 @@ Proyecto backend desarrollado con Node.js, Express y MongoDB, que incluye genera
 
 ## ⚙️ Instalación y ejecución local
 
-1. Clonar el repositorio:
+### 1. Clonar el repositorio
 
 ```bash
 git clone https://github.com/GaboGonza78/ENTREGA-N1.git
 cd ENTREGA-N1
 ```
 
-2. Instalar dependencias:
+### 2. Instalar dependencias
 
 ```bash
 npm install
 ```
 
-3. Crear archivo `.env` en la raíz:
+### 3. Crear archivo `.env`
+
+En la raíz del proyecto:
 
 ```env
 MONGO_URL=tu_string_de_conexion_mongo
 ```
 
-4. Ejecutar el servidor:
+### 4. Ejecutar el servidor
 
 ```bash
 npm run dev
@@ -107,7 +109,7 @@ docker build -t entrega-backend .
 docker run -p 3000:3000 entrega-backend
 ```
 
-O si el puerto está ocupado:
+Si el puerto está ocupado:
 
 ```bash
 docker run -p 3001:3000 entrega-backend
@@ -123,7 +125,5 @@ docker run -p 3001:3000 entrega-backend
 
 ## 👨‍💻 Autor
 
-Gabriel González
+**Gabriel González**
 Proyecto académico - Backend
-
----
