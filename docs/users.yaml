@@ -1,0 +1,80 @@
+openapi: 3.0.0
+info:
+  title: API Users
+  version: 1.0.0
+  description: SWAGGER YAML FUNCIONANDO OK
+
+paths:
+  /api/users:
+    get:
+      summary: Obtener todos los usuarios
+      tags:
+        - Users
+      responses:
+        "200":
+          description: Lista de usuarios
+
+    post:
+      summary: Crear usuario
+      tags:
+        - Users
+      requestBody:
+        required: true
+        content:
+          application/json:
+            example:
+              first_name: Juan
+              last_name: Perez
+              email: juan@mail.com
+              password: 1234
+              role: user
+      responses:
+        "200":
+          description: Usuario creado
+
+  /api/users/{uid}:
+    get:
+      summary: Obtener usuario por ID
+      tags:
+        - Users
+      parameters:
+        - name: uid
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Usuario encontrado
+        "404":
+          description: Usuario no encontrado
+
+    put:
+      summary: Actualizar usuario
+      tags:
+        - Users
+      parameters:
+        - name: uid
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+      responses:
+        "200":
+          description: Usuario actualizado
+
+    delete:
+      summary: Eliminar usuario
+      tags:
+        - Users
+      parameters:
+        - name: uid
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Usuario eliminado
